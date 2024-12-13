@@ -1,0 +1,48 @@
+.myHeader{
+    background-color: #004c88;
+    color: white;
+    text-align: center;
+    font-family: "Arial", sans-serif;
+    height: 100px;
+    display: flex; /* Make it a flex container */
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally (if needed) */
+}
+
+/* Logo-Styles */
+.logo img {
+    height: 60px; /* Höhe des Logos */
+    cursor: pointer; 
+}
+
+nav ul {
+        list-style-type: none; /* Entfernt Aufzählungszeichen */
+        padding: 0; /* Entfernt Standard-Padding */
+        margin: 0; /* Entfernt Standard-Margin */
+        display: flex; /* Anordnung der Elemente nebeneinander */
+        justify-content: right;  /*Zentriert die Liste horizontal */
+        align-items: center; /* Vertikale Zentrierung */
+    }
+    
+    nav ul li {
+        margin: 0 15px; /* Abstand zwischen den Listenelementen */
+        margin-left: 20px; /* Abstand zwischen Menüelementen */
+        cursor: pointer; /* Mauszeiger auf Zeiger setzen */
+        color: dimgray; /* Textfarbe */
+        font-family: "Arial", sans-serif;
+    }   
+    
+   /* "Home" links ausrichten
+    nav ul li:first-child {
+        margin-right: auto; 
+    } 
+    */
+    /* Footer*/
+    footer {
+        background-color:#004c88;
+        height: 100px;
+        display: flex; /* Make it a flex container */
+        align-items: center; /* Center content vertically */
+        justify-content: right;
+    }
+
