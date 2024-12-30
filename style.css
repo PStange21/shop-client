@@ -1,18 +1,34 @@
-.myHeader{
-    background-color: #004c88;
-    color: white;
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+
+}
+.aboveH1 {
+    background-color: #fff;
+    color: #060a0a;
     text-align: center;
-    font-family: "Arial", sans-serif;
-    height: 100px;
+    /* height: 100px;*/
     display: flex; /* Make it a flex container */
     align-items: center; /* Center content vertically */
-    justify-content: center; /* Center content horizontally (if needed) */
+    justify-content: space-between; /* Center content horizontally (if needed) */
 }
-
 /* Logo-Styles */
 .logo img {
-    height: 60px; /* Höhe des Logos */
-    cursor: pointer; 
+    height: 50px; /* Höhe des Logos */
+    cursor: pointer;
+    padding-bottom: -12px;
+    margin-bottom: -12px;
+}
+
+/*Allgemeine Link-Formatierung*/
+a {
+    text-decoration: none; /* Unterstreichung entfernen */
+}
+
+/* Hover-Effekt */
+a:hover {
+    color: red; /* Farbe beim Darüberfahren */
+    text-decoration: underline; /* Unterstreichung beim Hover */
 }
 
 nav ul {
@@ -28,21 +44,111 @@ nav ul {
         margin: 0 15px; /* Abstand zwischen den Listenelementen */
         margin-left: 20px; /* Abstand zwischen Menüelementen */
         cursor: pointer; /* Mauszeiger auf Zeiger setzen */
-        color: dimgray; /* Textfarbe */
-        font-family: "Arial", sans-serif;
     }   
     
-   /* "Home" links ausrichten
-    nav ul li:first-child {
-        margin-right: auto; 
-    } 
-    */
+    H1 {
+        background-color: #004c88;
+        color: white;
+        text-align: center;
+        font-style: normal;
+        font-weight: lighter;
+        /*height: 100px;*/
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .image-container {
+        display: flex;
+        justify-content: center; /* Horizontal zentrieren */
+        align-items: center; /* Vertikal zentrieren (optional) */
+        height: 100%; /* Optional: Höhe für vertikale Zentrierung */
+    }
+    .center-image {
+        display: block; /* Block-Level für margin */
+        margin: 0 auto; /* Zentriert horizontal */
+    }
+    main {
+        max-width: 1200px; /* Maximale Breite des Hauptbereichs */
+        margin: 0 auto;    /* Zentriert den Bereich horizontal */
+        padding: 20px;     /* Innenabstand für besseren Lesekomfort */
+        box-sizing: border-box; /* Bezieht Padding in die Breite mit ein */
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: lighter;
+    }
+    main {
+        font-size: 1rem; /* Standardgröße für kleine Geräte */
+    }
+    
+    @media (min-width: 768px) {
+        main {
+            font-size: 1.2rem; /* Größere Schrift für Tablets und Desktops */
+        }
+    }
+    
     /* Footer*/
     footer {
+        display: flex; /* Aktiviert Flexbox */
         background-color:#004c88;
+        color: #ffffff;
         height: 100px;
-        display: flex; /* Make it a flex container */
         align-items: center; /* Center content vertically */
-        justify-content: right;
+        justify-content: space-between;
+
+    }
+    .copyright-sign {
+        text-align: left;
+        padding: 1px 20px;
+    }
+    .navi-f {
+        color: #fff;
+        font-weight: lighter;
+    }
+   
+    .contact-form-container {
+        display: flex;
+        max-width: 600px;
+        margin: 0px auto; /* Zentriert das Div horizontal */
+        padding: 20px 5px;
+        justify-content: center; /* Zentriert den Inhalt innerhalb des Divs */
+        align-items: center; /* Vertikal zentrieren (optional, abhängig von der Höhe) */
+        height: 100%; /* Optional */
+        background-color: #c0d7e6;
+        border-radius: 8px;
     }
 
+    .mylabel{
+    display:flex;
+    justify-content: left;
+    margin-left: 30px;
+        /* align-items: center; /* Vertikal zentrieren (optional) */
+        flex-grow: 1; /* Nimmt den verfügbaren Platz ein */
+}
+.myinput {
+    display:block;
+    height: 40px;
+    width: 90%; /* Passt sich an den Container an */
+    margin: 0 auto; /* Zentriert das Div horizontal */
+    border-radius: 5px; /* Runde Ecken */
+}
+.mytextarea{
+    display:block;
+    height: 200px;
+    width: 90%; /* Passt sich an den Container an */
+    margin: 0 auto; /* Zentriert das Div horizontal */
+    border-radius: 5px; /* Runde Ecken */
+    font-size: 1.2rem;
+}
+.mylabel-gdpr {
+    padding: 30px 30px;
+    font-size: 0.9rem;
+}
+input[type="checkbox"] {
+    transform: scale(1.2); /* Skaliert die Checkbox */
+    left: auto;
+}
+.contact-gdpr{
+    display: flex;
+    margin: 0px auto; /* Zentriert das Div horizontal */
+    padding: 10px 5px;
+    justify-content: center; /* Zentriert den Inhalt innerhalb des Divs */
+    align-items: center; /* Vertikal zentrieren (optional, abhängig von der Höhe) */
+}

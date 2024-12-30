@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout Example</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 gleich breite Spalten */
+            grid-template-rows: 50px 1fr 50px; /* Zeilen mit unterschiedlichen Höhen */
+            gap: 10px; /* Abstand zwischen den Zellen */
+            width: 800px;
+            height: 400px;
+            margin: 20px auto;
+            background-color: pink;
+            border: 2px solid black;
+        }
+
+        .item {
+            /*background-color: rgb(143, 227, 200);*/
+            color: black;
+            padding: 10px;
+            font-size: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Spezifische Platzierung der Items */
+        .item:nth-child(1) {
+            grid-column: 1 / 4; /* Überspannt alle Spalten */
+            background-color: palevioletred;
+        }
+
+        .item:nth-child(2) {
+            grid-column: 1 / 2; /* Erste Spalte */
+            background-color: rosybrown;
+        }
+
+        .item:nth-child(3) {
+            grid-column: 2 / 4; /* Überspannt Spalten 2 und 3 */
+            background-color: royalblue;
+        }
+
+        .item:nth-child(4) {
+            grid-column: 1 / 4; /* Überspannt alle Spalten */
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">Navbar</div>
+        <div class="item">Sidebar</div>
+        <div class="item">Content</div>
+        <div class="item">Footer</div>
+    </div>
+</body>
+</html>
