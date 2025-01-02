@@ -1,6 +1,10 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: lighter;
+    display: flex; /* Make it a flex container */
+    flex-direction: row;
+    flex-direction: column;
 
 }
 .aboveH1 {
@@ -56,23 +60,11 @@ nav ul {
         padding-top: 20px;
         padding-bottom: 20px;
     }
-    .image-container {
-        display: flex;
-        justify-content: center; /* Horizontal zentrieren */
-        align-items: center; /* Vertikal zentrieren (optional) */
-        height: 100%; /* Optional: Höhe für vertikale Zentrierung */
-    }
-    .center-image {
-        display: block; /* Block-Level für margin */
-        margin: 0 auto; /* Zentriert horizontal */
-    }
     main {
         max-width: 1200px; /* Maximale Breite des Hauptbereichs */
         margin: 0 auto;    /* Zentriert den Bereich horizontal */
-        padding: 20px;     /* Innenabstand für besseren Lesekomfort */
+        padding: 0 10px;     /* Innenabstand für besseren Lesekomfort */
         box-sizing: border-box; /* Bezieht Padding in die Breite mit ein */
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        font-weight: lighter;
     }
     main {
         font-size: 1rem; /* Standardgröße für kleine Geräte */
@@ -83,7 +75,57 @@ nav ul {
             font-size: 1.2rem; /* Größere Schrift für Tablets und Desktops */
         }
     }
-    
+          /* Container für das Raster */
+      .product-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 Spalten */
+        gap: 20px;
+        padding: 10px; /* Innenabstand */
+        margin-bottom: 20px;
+        place-items: center; /* Zentriert die Kinder horizontal und vertikal */
+    }
+
+    /* Responsive Einstellung: bei kleinen Bildschirmen */
+    @media (max-width: 1024px) {
+        .product-grid {
+            grid-template-columns: 1fr; /* Nur 1 Spalte */
+        }
+    }
+
+    /* Styling für die Bilder */
+    .product-grid p {
+        width: 480px;
+        height: 100%; /* Optional */
+        background-color: #ffffff;
+        border: 3px solid #004c88;
+        border-radius: 8px;
+        margin: 0 auto;
+        color: #004c88;
+        font-size: 120%;
+        font-weight: normal;
+        display: flex; /* Make it a flex container */
+        flex-direction: column;
+        align-items: center; /* Center content vertically */
+        justify-content: space-between; /* Center content horizontally (if needed) */
+    }
+
+    .product-grid img {
+       
+        max-width: 400px;
+        max-height: 300px;
+        margin: 0 auto;
+        padding: 10px 10px;
+        height: auto; /* Proportionen bleiben erhalten */
+        border-radius: 8px; /* Optionale abgerundete Ecken */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Leichter Schatten */
+        transition: transform 0.3s ease; /* Animation beim Hover */
+    }
+
+    .product-grid img:hover {
+        transform: scale(0.9); /* Vergrößert das Bild leicht */
+    }
+
+
     /* Footer*/
     footer {
         display: flex; /* Aktiviert Flexbox */
@@ -113,6 +155,7 @@ nav ul {
         height: 100%; /* Optional */
         background-color: #c0d7e6;
         border-radius: 8px;
+        margin-bottom: 20px;
     }
 
     .mylabel{
